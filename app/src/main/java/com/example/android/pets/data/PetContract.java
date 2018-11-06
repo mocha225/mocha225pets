@@ -11,7 +11,7 @@ public final class PetContract {
      * content authority is the package name for the app, which is guaranteed to be unique on the
      * device.
      */
-    public static final String CONTENT_AUTHORITY = ".com.example.android.pets";
+    public static final String CONTENT_AUTHORITY = "com.example.android.pets";
 
     /**
      * Use CONTENT_AUTHORITY to create the base of all URI's which apps will use to contact
@@ -55,10 +55,7 @@ public final class PetContract {
      * or {@link #GENDER_FEMALE}.
      */
     public static boolean isValidGender(int gender) {
-        if (gender == GENDER_UNKNOWN || gender == GENDER_MALE || gender == GENDER_FEMALE) {
-            return true;
-        }
-        return false;
+        return gender == GENDER_UNKNOWN || gender == GENDER_MALE || gender == GENDER_FEMALE;
     }}}
 
 
